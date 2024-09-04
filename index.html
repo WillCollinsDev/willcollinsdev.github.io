@@ -1,83 +1,399 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
-  <!-- Site made with Mobirise Website Builder v5.9.18, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.18, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=QJklOP"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=QJklOP" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlothKing</title>
+    <link rel="icon" href="slothkingfavicon.png" type="image/png">
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif; /* Main font */
+        color: #fff;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+	padding-right: 100px;
+	padding-top: 25px;
+        z-index: 1000;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif; /* Main font for nav */
+    }
+    nav img {
+        height: 60px;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 18px; /* Increased font size */
+        font-weight: bold; /* Bold text */
+	line-height: 1.6;
+    }
+    nav a.active {
+        border-bottom: 2px solid #fff; /* Underline color and thickness */
+        padding-bottom: 5px; /* Space between text and underline */
+    }
+    #main-image {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .background-image {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%; /* Make the image larger than the viewport */
+        height: 120%; /* Make the image larger than the viewport */
+        background-image: url('main-image.png'); /* Replace with your main image */
+        background-size: cover;
+        background-position: center;
+        z-index: -1; /* Place it behind the text */
+        transition: transform 0.5s ease-out;
+    }
+    #main-image h1 {
+        font-size: 4em;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+        margin: 0;
+        z-index: 1;
+    }
+    #games {
+        background-color: #181930;
+        background-image: url('games-background.png');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 100px;
+        text-align: center;
+        min-height: 50vh;
+    }
+    #games h2 {
+        font-size: 3em; /* Increased font size */
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Similar to Impact */
+        margin-bottom: 30px;
+	padding-bottom: 100px;
+        font-weight: bold; /* Bold text */
+    }
+    .games-container {
+        display: flex;
+	flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .game-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px; /* Adjust width to fit boxes side by side with space */
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+    }
+    .game-item-content {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    }
+    .game-item p {
+        color: #AEB8BD;
+        font-family: Verdana, Geneva, sans-serif; /* Special font */
+        font-size: 18px; /* Increased font size */
+        line-height: 1.6; /* Increased line height for better readability */
+        margin: 0; /* Center the paragraph */
+    }
+    .game-box {
+        background-color: #333;
+        border-radius: 10px;
+        width: 100%; /* Full width of container */
+        padding-bottom: 52%; /* 4:3 Aspect Ratio (width is 4, height is 3, hence 75%) */
+        position: relative;
+        transition: transform 0.3s ease;
+	overflow: hidden;
+    }
+    .game-box:hover {
+        transform: scale(1.05);
+    }
+    .game-title {
+        font-size: 24px; /* Increased font size */
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+        margin: 10px 0;
+        font-weight: bold; /* Bold text */
+	text-align: left;
+	padding-top: 40px;
+    }
+    .game-text {
+	
+    	text-align: left; /* Align text to the left */
+    	width: 100%; /* Full width to align text correctly */
+	targin-top: 10px;
+	padding: 0 10px;
+	box-sizing: border-box;
+    }
+    #about-us {
+        background-color: #111221; /* Darkened Grey */
+        color: #fff;
+        padding: 5% 5%;
+        text-align: center;
+        min-height: 30vh;
+    }
+    #about-us img {
+        height: 120px;
+    }
+    #about-us h3 {
+        color: #FFFFFF;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+        font-size: 3em; /* Increased font size */
+        font-weight: bold; /* Bold text */
+    }
+    #about-us p {
+        color: #AEB8BD;
+        font-family: Verdana, Geneva, sans-serif; /* Special font */
+        font-size: 18px; /* Increased font size */
+        line-height: 1.6; /* Increased line height for better readability */
+        max-width: 600px; /* Control text width */
+        margin: 0 auto; /* Center the paragraph */
+    }
+@media (max-width: 768px) {
+    #about-us img {
+        height: 80px; /* Reduce the height for smaller screens */
+    }
 
-  
-  
-  
+    #about-us h3 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    #about-us p {
+        font-size: 16px; /* Adjust paragraph text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #about-us img {
+        height: 60px; /* Further reduce the height for very small screens */
+    }
+
+    #about-us h3 {
+        font-size: 1.5em; /* Further adjust heading size for very small screens */
+    }
+
+    #about-us p {
+        font-size: 14px; /* Further adjust paragraph text size for very small screens */
+    }
+}
+
+
+    #sliderImage {
+        background-image: url('img_sliderImage.png'); /* Replace with your Gorilla Showdown image */
+        background-size: cover;
+        background-position: top;
+	min-height: 20vh;
+	height: 100%;
+	padding: 20px;
+    }
+    #footer {
+        background-color: #FFFFFF;
+        color: #333;
+        padding: 20px;
+        display: flex;
+        justify-content: center; /* Centering footer content */
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Adjusted spacing */
+        align-items: flex-start; 
+        font-family: Arial, sans-serif; /* Main font for footer */
+        font-size: 18px; /* Increased font size */
+	padding-top: 70px;
+	padding-bottom: 70px;
+    }
+    .footer-logo {
+        display: flex;
+        align-items: center;
+    }
+    .footer-logo img {
+        max-height: 30px; /* Adjust to fit logo size */
+        width: auto;
+    }
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Centering column content */
+	padding-left: 10%;
+	padding-right: 10%;
+    }
+    .footer-column h3 {
+        color: #AEB8BD;
+        margin: 0 0 10px;
+        font-weight: normal; /* Bold text */
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+    }
+    .footer-column a {
+        color: #333;
+        text-decoration: none;
+        margin: 5px 0;
+        font-weight: bold;
+        font-family: Arial, sans-serif; /* Main font for links */
+    }
+    .social-icons {
+        display: flex;
+        justify-content: flex-start; /* Center icons horizontally */
+        gap: 5px; /* Space between icons */
+    }
+    .social-icons img {
+        height: 30px;
+	width: auto;
+        margin: 5px;
+        object-fit: contain;
+    }
+    .social-icons img:first-child {
+        margin-left: 0; /* Remove left margin for the first icon */
+    }
+
+    /* Add background images for the game boxes */
+    .game-box.gorilla-showdown {
+        background-image: url('img_gorillaShowdown.png'); /* Replace with your Gorilla Showdown image */
+        background-size: cover;
+        background-position: center;
+    }
+    .game-box.flickor {
+        background-image: url('img_flickor.png'); /* Replace with your Flickor image */
+        background-size: cover;
+        background-position: center;
+    }
+    .game-box {
+        cursor: pointer;
+    }
+	
+</style>
 </head>
-<body style="background-color:#9C98CF;">
-  
-  <section data-bs-version="5.1" class="image01 cid-ufh3FIWx7V" id="image01-4">
-  
+<body>
 
-  
-  
-
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-7">
-        <div class="image-wrapper mb-4">
-          <img class="w-100" src="assets/images/logowhite.webp" alt="SlothKing Logo">
+    <nav>
+        <img src="SlothKing_Logo_White.png" alt="SlothKing Logo"> <!-- Replace with your logo -->
+        <div>
+            <a href="index.html" class="active">games</a>
+            <a href="team.html">team</a>
         </div>
-        <h4 class="mbr-description mbr-fonts-style mb-3 align-center display-5">
-          <strong>Gorilla Showdown coming late 2024</strong></h4>
-        
-      </div>
+    </nav>
+
+    <div id="main-image">
+        <div class="background-image"></div>
+        <h1>Melbourne Made Games</h1>
     </div>
-  </div>
-</section>
 
-<section data-bs-version="5.1" class="social05 cid-ufh2ooGXvY" id="social05-2">
-    
-
-    
-
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-12">
-                <div class="social-row">
-                    <div class="soc-item">
-                        <a href="https://discord.gg/97CP2pxHqp" target="_blank">
-                            <span class="mbr-iconfont socicon-discord socicon"></span>
-                        </a>
-                    </div>
-                    <div class="soc-item">
-                        <a href="https://www.instagram.com/slothkingau/" target="_blank">
-                            <span class="mbr-iconfont socicon-instagram socicon"></span>
-                        </a>
-                    </div>
-                    <div class="soc-item">
-                        <a href="https://www.tiktok.com/@slothkingau" target="_blank">
-                            <span class="mbr-iconfont socicon-tiktok socicon"></span>
-                        </a>
-                    </div>
-                    
-                    
-                </div>
+    <div id="games">
+    <h2>What we're working on</h2>
+    <div class="games-container">
+        <div class="game-item">
+            <div class="game-box gorilla-showdown">
+                <a href="gorilla-showdown.html"></a> <!-- Replace with your link -->
+            </div>
+            <div class="game-text">
+                <div class="game-title">Gorilla Showdown</div>
+                <p>Gorilla Showdown is our upcoming stylized third-person shooter rhythm game inspired by the late 90's early 2000's house and funk scenes. Fight it out to be the reining gorilla in the dance floor battle arenas.</p>
+            </div>
+        </div>
+        <div class="game-item">
+		<div class="game-box flickor" onclick="window.location.href='https://slothkingau.itch.io/flickor'">
+			<a href="https://slothkingau.itch.io/flickor"></a> <!-- Replace with your link -->
+		</div>
+            <div class="game-text">
+                <div class="game-title">Flickor</div>
+                <p>Flickor is an engaging single-player time-management and shopkeeping simulation game. Step into the shoes of a dedicated alchemist, tasked with brewing potions for a diverse clientele ranging from adventurous travellers to ordinary townsfolk.</p>
             </div>
         </div>
     </div>
-</section>
-  
-  
+</div>
+    <div id="sliderImage">
+    </div>
+    <div id="about-us">
+        <img src="SlothKing_Logo_White.png" alt="SlothKing Logo"> <!-- Replace with your logo -->
+	<h3>About Us</h3>
+        <p>We're SlothKing, an indipendent, new game development studio based in Melbourne, Australia. <br><br> We're currently working on Gorilla Showdown, our first game, and we're all about combining the playing with friends and creating truly unique titles to create unforgettable memories.<br><br>Come along for the ride as we turn our ideas into exciting new experiences!</p>
+    </div>
+
+    <div id="footer">
+        <div class="footer-column">
+            <h3>Studio</h3>
+            <a href="index.html">games</a>
+            <a href="team.html">team</a>
+        </div>
+	<div class="footer-column">
+            <h3>Games</h3>
+            <a href="index.html">gorilla showdown</a>
+            <a href="https://slothkingau.itch.io/flickor">flickor</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Social</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/slothkingau/?next=%2F"><img src="instagram-icon.png" alt="Instagram"></a> <!-- Replace with your icon -->
+                <a href="https://discord.gg/mEaR4yuGFf"><img src="discord-icon.png" alt="Discord"></a> <!-- Replace with your icon -->
+                <a href="https://x.com/SlothKingAU"><img src="twitter-icon.png" alt="Twitter (X)"></a> <!-- Replace with your icon -->
+                <a href="https://www.youtube.com/@SlothKingAU"><img src="youtube-icon.png" alt="YouTube"></a> <!-- Replace with your icon -->
+            </div>
+        </div>
+    </div>
+
+    
+<script>
+let lastXOffset = 0;
+let lastYOffset = 0;
+const movementFactor = 0.1; // Adjust for more or less movement
+const smoothingFactor = 0.1; // Adjust for smoothness
+const backgroundImage = document.querySelector('.background-image');
+
+function getMaxTranslation() {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    const imageWidth = backgroundImage.scrollWidth;
+    const imageHeight = backgroundImage.scrollHeight;
+
+    const maxTranslateX = (imageWidth - viewportWidth) / 2;
+    const maxTranslateY = (imageHeight - viewportHeight) / 2;
+
+    return { maxTranslateX, maxTranslateY };
+}
+
+document.addEventListener('mousemove', function(e) {
+    const { maxTranslateX, maxTranslateY } = getMaxTranslation();
+
+    const targetXOffset = (window.innerWidth / 2 - e.pageX) * movementFactor;
+    const targetYOffset = (window.innerHeight / 2 - e.pageY) * movementFactor;
+
+    const constrainedXOffset = Math.max(-maxTranslateX, Math.min(maxTranslateX, targetXOffset));
+    const constrainedYOffset = Math.max(-maxTranslateY, Math.min(maxTranslateY, targetYOffset));
+
+    function smoothMove() {
+        lastXOffset += (constrainedXOffset - lastXOffset) * smoothingFactor;
+        lastYOffset += (constrainedYOffset - lastYOffset) * smoothingFactor;
+
+        backgroundImage.style.transform = `translate(${lastXOffset}px, ${lastYOffset}px)`;
+
+        if (Math.abs(constrainedXOffset - lastXOffset) > 1 || Math.abs(constrainedYOffset - lastYOffset) > 1) {
+            requestAnimationFrame(smoothMove);
+        }
+    }
+
+    requestAnimationFrame(smoothMove);
+});
+
+window.addEventListener('resize', function() {
+    getMaxTranslation();
+});
+
+
+</script>
+
 </body>
 </html>
