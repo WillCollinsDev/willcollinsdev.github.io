@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team - SlothKing</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif; /* Main font */
+        color: #fff;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+	padding-right: 100px;
+	padding-top: 25px;
+        z-index: 1000;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif; /* Main font for nav */
+    }
+    nav img {
+        height: 60px;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 18px; /* Increased font size */
+        font-weight: bold; /* Bold text */
+	line-height: 1.6;
+    }
+    nav a.active {
+        border-bottom: 2px solid #fff; /* Underline color and thickness */
+        padding-bottom: 5px; /* Space between text and underline */
+    }
+    #main-image {
+        position: relative;
+        height: 55vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .background-image {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%; /* Make the image larger than the viewport */
+        height: 100%; /* Make the image larger than the viewport */
+        background-image: url('teams-main-image.png'); /* Replace with your main image */
+        background-size: cover;
+        background-position: center;
+        z-index: -1; /* Place it behind the text */
+        transition: transform 0.5s ease-out;
+    }
+    #main-image h1 {
+        font-size: 3em;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+        margin: 0;
+        z-index: 1;
+    }
+    .email-button {
+        display: inline-block;
+        background-color: #929EF4; /* Blue color */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px; /* Pill shape */
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+    }
+    .email-button:hover {
+        background-color: #6e77ba; /* Darker blue on hover */
+    }
+	
+    #team-members {
+    background-color: #181930;
+    color: #fff;
+    padding: 100px 100px;
+    text-align: center;
+    min-height: 10vh;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
+    gap: 20px; /* Space between items */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center grid */
+}
+
+    .team-member {
+        text-align: center;
+    }
+
+    .team-photo {
+    	width: 170px; /* Adjust size as needed */
+    	height: 170px;
+    	border-radius: 50%; /* Circular border */
+    	object-fit: cover;
+        border: 3px solid #ccc; /* Border color */
+        margin-bottom: 10px;
+    }
+
+    .team-name {
+        color: #FFFFFF; /* Gray text */
+        font-size: 16px; /* Adjust size as needed */
+    }
+    .team-role {
+        color: #ccc; /* Gray text */
+        font-size: 10px; /* Adjust size as needed */
+    }
+    #contact-us {
+        background-color: #111221; /* Darkened Grey */
+        color: #fff;
+        padding: 100px;
+        text-align: center;
+        min-height: 30vh;
+    }
+    #contact-us h3 {
+        color: #FFFFFF;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+        font-size: 3em; /* Increased font size */
+        font-weight: bold; /* Bold text */
+    }
+    #contact-us p {
+        color: #AEB8BD;
+        font-family: Verdana, Geneva, sans-serif; /* Special font */
+        font-size: 18px; /* Increased font size */
+        line-height: 1.6; /* Increased line height for better readability */
+        max-width: 600px; /* Control text width */
+        margin: 0 auto; /* Center the paragraph */
+	padding-bottom: 50px;
+    }
+    #footer {
+        background-color: #FFFFFF;
+        color: #333;
+        padding: 20px;
+        display: flex;
+        justify-content: center; /* Centering footer content */
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Adjusted spacing */
+        align-items: flex-start; 
+        font-family: Arial, sans-serif; /* Main font for footer */
+        font-size: 18px; /* Increased font size */
+	padding-top: 70px;
+	padding-bottom: 70px;
+    }
+    .footer-logo {
+        display: flex;
+        align-items: center;
+    }
+    .footer-logo img {
+        max-height: 30px; /* Adjust to fit logo size */
+        width: auto;
+    }
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Centering column content */
+	padding-left: 10%;
+	padding-right: 10%;
+    }
+    .footer-column h3 {
+        color: #AEB8BD;
+        margin: 0 0 10px;
+        font-weight: normal; /* Bold text */
+        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+    }
+    .footer-column a {
+        color: #333;
+        text-decoration: none;
+        margin: 5px 0;
+        font-weight: bold;
+        font-family: Arial, sans-serif; /* Main font for links */
+    }
+    .social-icons {
+        display: flex;
+        justify-content: flex-start; /* Center icons horizontally */
+        gap: 5px; /* Space between icons */
+    }
+    .social-icons img {
+        height: 30px;
+	width: auto;
+        margin: 5px;
+        object-fit: contain;
+    }
+    .social-icons img:first-child {
+        margin-left: 0; /* Remove left margin for the first icon */
+    }
+
+    /* Add background images for the game boxes */
+    .game-box.gorilla-showdown {
+        background-image: url('img_gorillaShowdown.png'); /* Replace with your Gorilla Showdown image */
+        background-size: cover;
+        background-position: center;
+    }
+    .game-box.flickor {
+        background-image: url('img_flickor.png'); /* Replace with your Flickor image */
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+</head>
+<body>
+
+    <nav>
+        <img src="SlothKing_Logo_White.png" alt="SlothKing Logo"> <!-- Replace with your logo -->
+        <div>
+            <a href="index.html">games</a>
+            <a href="team.html" class="active">team</a>
+        </div>
+    </nav>
+
+    <div id="main-image">
+        <div class="background-image"></div>
+        <h1>The SlothKing Family</h1>
+    </div>
+<div id="team-members">
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="team-member1.png" alt="Team Member 1" class="team-photo">
+            <p class="team-name">George</p>
+	    <p class="team-role">Co-Founder, Lead Artist</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member2.png" alt="Team Member 2" class="team-photo">
+            <p class="team-name">Hercules</p>
+	    <p class="team-role">Good Vibes Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member3.png" alt="Team Member 3" class="team-photo">
+            <p class="team-name">Miki</p>
+	    <p class="team-role">Media Intern</p>
+        </div>
+	<div class="team-member">
+            <img src="team-member4.png" alt="Team Member 4" class="team-photo">
+            <p class="team-name">Will</p>
+	    <p class="team-role">Co-Founder, Lead Programmer</p>
+        </div>
+        <!-- Add more team members here -->
+    </div>
+</div>
+</div>
+    <div id="contact-us">
+	<h3>Contact Us</h3>
+        <p>Got some questions? Send us an email.</p>
+	<a href="mailto:SlothKingAU@gmail.com" class="email-button">SlothKingAU@gmail.com</a>
+    </div>
+
+    <div id="footer">
+        <div class="footer-column">
+            <h3>Studio</h3>
+            <a href="index.html">games</a>
+            <a href="team.html">team</a>
+        </div>
+	<div class="footer-column">
+            <h3>Games</h3>
+            <a href="index.html">gorilla showdown</a>
+            <a href="https://slothkingau.itch.io/flickor">flickor</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Social</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/slothkingau/?next=%2F"><img src="instagram-icon.png" alt="Instagram"></a> <!-- Replace with your icon -->
+                <a href="https://discord.gg/mEaR4yuGFf"><img src="discord-icon.png" alt="Discord"></a> <!-- Replace with your icon -->
+                <a href="https://x.com/SlothKingAU"><img src="twitter-icon.png" alt="Twitter (X)"></a> <!-- Replace with your icon -->
+                <a href="https://www.youtube.com/@SlothKingAU"><img src="youtube-icon.png" alt="YouTube"></a> <!-- Replace with your icon -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
