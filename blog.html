@@ -13,36 +13,39 @@
             font-family: Arial, sans-serif; /* Main font */
             color: #fff;
         }
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: transparent;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-	    padding-right: 100px;
-	    padding-top: 25px;
-        z-index: 1000;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif; /* Main font for nav */
-    }
-    nav img {
-        height: 60px;
-    }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 18px; /* Increased font size */
-        font-weight: bold; /* Bold text */
-	    line-height: 1.6;
-    }
-    nav a.active {
-        border-bottom: 2px solid #fff; /* Underline color and thickness */
-        padding-bottom: 5px; /* Space between text and underline */
-    }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            padding-right: 100px;
+            padding-top: 25px;
+            z-index: 1000;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Main font for nav */
+        }
+
+            nav img {
+                height: 60px;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 20px;
+                font-size: 18px; /* Increased font size */
+                font-weight: bold; /* Bold text */
+                line-height: 1.6;
+            }
+
+                nav a.active {
+                    border-bottom: 2px solid #fff; /* Underline color and thickness */
+                    padding-bottom: 5px; /* Space between text and underline */
+                }
         #main-image {
         position: relative;
         height: 30vh;
@@ -92,7 +95,6 @@
             padding: 20px;
             margin-bottom: 40px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative;
             margin-left: 120px; /* Add left margin for the dates */
             flex-wrap: wrap; /* Ensure content wraps when the screen is small */
@@ -235,49 +237,106 @@
 
         /* Mobile responsive styles */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
+            nav {
+                justify-content: center; /* Center the navbar content */
+                padding-right: 0; /* Remove the right padding */
+                padding-left: 0; /* Remove the left padding */
+                flex-direction: column; /* Stack the logo and buttons vertically */
+                align-items: center; /* Center the items horizontally */
             }
 
-            .blog-content {
-                width: 100%;
-                padding-left: 0;
+                nav img {
+                    margin: 0 auto; /* Center the logo horizontally */
+                    display: block; /* Ensures it behaves like a block element */
+                }
+            nav div {
+                display: flex; /* Hide the nav links for now (optional, if needed) */
+                gap: 20px; /* Space between buttons */
+                margin-top: 10px;
             }
-
-            .post {
-                margin-left: 0; /* Remove the margin on the left */
-                margin-right: 0; /* Center the post */
-                flex-direction: column;
-                align-items: center;
+            nav div a {
+                display: inline-block; /* Make each link a block */
+                padding: 10px 15px; /* Add padding to the links */
+                text-align: center; /* Center the text in the buttons */
             }
-
+            #main-image h1 {
+                font-size: 2em;
+                transform: translateY(50px);
+            }
+            #footer {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align the items */
+                text-align: center; /* Center text */
+                padding: 20px; /* Adjust padding for better spacing */
+            }
+            .footer-column {
+                align-items: center; /* Center align items in each column */
+                padding: 0; /* Remove any left/right padding */
+                margin-bottom: 20px; /* Add spacing between columns */
+            }
+            .footer-column h3, .footer-column a {
+                text-align: center; /* Center align text within columns */
+            }
+            .social-icons {
+                justify-content: center; /* Center the social icons */
+            }
             .post-date {
-                left: 0;
-                position: relative;
-                border-right: none;
-                margin-bottom: 10px;
+                display: none;
             }
-
-            .timeline {
-                left: 0;
-                width: 3px;
-                height: auto; /* Make the line adjust dynamically */
+            .blog-content {
+                width: 95%;
+                padding: 0px;
+            }
+            .post {
+                margin-left: 0px; /* Add left margin for the dates */
+            }
+            .post-body {
+                margin-left: 0px;
+            }
+            .post h2 {
+                font-size: 1.4em;
             }
         }
 
         /* Small screen mobile adjustments */
         @media (max-width: 480px) {
+            #main-image h1 {
+                font-size: 2em;
+                transform: translateY(70px);
+            }
+            #footer {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align the items */
+                text-align: center; /* Center text */
+                padding: 20px; /* Adjust padding for better spacing */
+            }
+            .footer-column {
+                align-items: center; /* Center align items in each column */
+                padding: 0; /* Remove any left/right padding */
+                margin-bottom: 20px; /* Add spacing between columns */
+            }
+            .footer-column h3, .footer-column a {
+                text-align: center; /* Center align text within columns */
+            }
+
+            .social-icons {
+                justify-content: center; /* Center the social icons */
+            }
+            .post-date {
+                display: none;
+            }
+            .blog-content {
+                width: 95%;
+                padding: 0px;
+            }
+            .post {
+                margin-left: 0px; /* Add left margin for the dates */
+            }
+            .post-body {
+                margin-left: 0px;
+            }
             .post h2 {
                 font-size: 1.4em;
-            }
-
-            .post-body {
-                font-size: 0.9em;
-            }
-
-            .post-body img {
-                max-width: 100%; /* Ensure images are responsive */
             }
         }
     </style>
@@ -349,6 +408,7 @@
                 <a href="https://discord.gg/mEaR4yuGFf"><img src="discord-icon.png" alt="Discord"></a> <!-- Replace with your icon -->
                 <a href="https://x.com/SlothKingAU"><img src="twitter-icon.png" alt="Twitter (X)"></a> <!-- Replace with your icon -->
                 <a href="https://www.youtube.com/@SlothKingAU"><img src="youtube-icon.png" alt="YouTube"></a> <!-- Replace with your icon -->
+                <a href="https://bsky.app/profile/slothkingau.bsky.social"><img src="bluesky-icon.png" alt="BlueSky"></a><!-- Replace with your icon -->
             </div>
         </div>
     </div>
