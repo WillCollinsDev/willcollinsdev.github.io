@@ -4,175 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sloth King</title>
+    <link rel="canonical" href="https://www.slothking.au/" />
     <link rel="icon" href="slothkingfavicon.png" type="image/png">
     <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif; /* Main font */
-        color: #fff;
-    }
-    nav {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        background-color: transparent;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-	    padding-right: 100px;
-	    padding-top: 25px;
-        z-index: 1000;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif; /* Main font for nav */
-    }
-    nav img {
-        height: 60px;
-    }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-        font-size: 18px; /* Increased font size */
-        font-weight: bold; /* Bold text */
-	line-height: 1.6;
-    }
-    nav a.active {
-        border-bottom: 2px solid #fff; /* Underline color and thickness */
-        padding-bottom: 5px; /* Space between text and underline */
-    }
-    #main-image {
-        position: relative;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-    }
-    .background-image {
-        position: absolute;
-        top: -10%;
-        left: -10%;
-        width: 120%; /* Make the image larger than the viewport */
-        height: 120%; /* Make the image larger than the viewport */
-        background-image: url('main-image-1.png'); /* Replace with your main image */
-        background-size: cover;
-        background-position: center;
-        z-index: -1; /* Place it behind the text */
-        transition: transform 0.5s ease-out;
-    }
-    #main-image h1 {
-        font-size: 4em;
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-        margin: 0;
-        z-index: 1;
-    }
-    #games {
-        background-color: #181930;
-        background-image: url('games-background.png');
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        padding: 100px 100px;
-        text-align: center;
-        min-height: 50vh;
-    }
-    #games h2 {
-        font-size: 3em; /* Increased font size */
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Similar to Impact */
-        margin-bottom: 30px;
-	padding-bottom: 100px;
-        font-weight: bold; /* Bold text */
-    }
-    .games-container {
-        display: flex;
-	    flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .game-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 450px; /* Adjust width to fit boxes side by side with space */
-	    padding-left: 2.5%;
-	    padding-right: 2.5%;
-    }
-    .game-item-content {
-    	display: flex;
-    	flex-direction: column;
-    	align-items: center;
-    }
-    .game-item p {
-        color: #AEB8BD;
-        font-family: Verdana, Geneva, sans-serif; /* Special font */
-        font-size: 18px; /* Increased font size */
-        line-height: 1.6; /* Increased line height for better readability */
-        margin: 0; /* Center the paragraph */
-    }
-    .game-box {
-        background-color: #333;
-        border-radius: 10px;
-        width: 100%; /* Full width of container */
-        padding-bottom: 52%; /* 4:3 Aspect Ratio (width is 4, height is 3, hence 75%) */
-        position: relative;
-        transition: transform 0.3s ease;
-	    overflow: hidden;
-    }
-    .game-box:hover {
-        transform: scale(1.05);
-    }
-    .game-title {
-        font-size: 24px; /* Increased font size */
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-        margin: 10px 0;
-        font-weight: bold; /* Bold text */
-	    text-align: left;
-	    padding-top: 40px;
-    }
-    .game-text {
-	
-    	text-align: left; /* Align text to the left */
-    	width: 100%; /* Full width to align text correctly */
-	    margin-top: 10px;
-	    padding: 0 10px;
-	    box-sizing: border-box;
-    }
-    .game-text p {
-	    color: #AEB8BD;
-        font-family: Verdana, Geneva, sans-serif; /* Special font */
-        font-size: 18px; /* Increased font size */
-        line-height: 1.6; /* Increased line height for better readability */
-        max-width: 600px; /* Control text width */
-        margin: 0 auto; /* Center the paragraph */
-        
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif; /* Main font */
+            color: #fff;
+        }
 
-    #about-us {
-        background-color: #111221; /* Darkened Grey */
-        color: #fff;
-        padding: 5% 5%;
-        text-align: center;
-        min-height: 30vh;
-    }
-    #about-us img {
-        height: 120px;
-    }
-    #about-us h3 {
-        color: #FFFFFF;
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-        font-size: 3em; /* Increased font size */
-        font-weight: bold; /* Bold text */
-    }
-    #about-us p {
-        color: #AEB8BD;
-        font-family: Verdana, Geneva, sans-serif; /* Special font */
-        font-size: 18px; /* Increased font size */
-        line-height: 1.6; /* Increased line height for better readability */
-        max-width: 600px; /* Control text width */
-        margin: 0 auto; /* Center the paragraph */
-    }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            padding-right: 100px;
+            padding-top: 25px;
+            z-index: 1000;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Main font for nav */
+        }
+
+            nav img {
+                height: 60px;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 20px;
+                font-size: 18px; /* Increased font size */
+                font-weight: bold; /* Bold text */
+                line-height: 1.6;
+            }
+
+                nav a.active {
+                    border-bottom: 2px solid #fff; /* Underline color and thickness */
+                    padding-bottom: 5px; /* Space between text and underline */
+                }
+
+        #main-image {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%; /* Make the image larger than the viewport */
+            height: 120%; /* Make the image larger than the viewport */
+            background-image: url('main-image-1.png'); /* Replace with your main image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place it behind the text */
+            transition: transform 0.5s ease-out;
+        }
+
+        #main-image h1 {
+            font-size: 4em;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+            margin: 0;
+            z-index: 1;
+        }
+
+        #games {
+            background-color: #181930;
+            background-image: url('games-background.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 100px;
+            text-align: center;
+            min-height: 50vh;
+        }
+
+            #games h2 {
+                font-size: 3em; /* Increased font size */
+                font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Similar to Impact */
+                margin-bottom: 30px;
+                padding-bottom: 100px;
+                font-weight: bold; /* Bold text */
+            }
+
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .game-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 450px; /* Adjust width to fit boxes side by side with space */
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+        }
+
+        .game-item-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-item p {
+            color: #AEB8BD;
+            font-family: Verdana, Geneva, sans-serif; /* Special font */
+            font-size: 18px; /* Increased font size */
+            line-height: 1.6; /* Increased line height for better readability */
+            margin: 0; /* Center the paragraph */
+        }
+
+        .game-box {
+            background-color: #333;
+            border-radius: 10px;
+            width: 100%; /* Full width of container */
+            padding-bottom: 52%; /* 4:3 Aspect Ratio (width is 4, height is 3, hence 75%) */
+            position: relative;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+            .game-box:hover {
+                transform: scale(1.05);
+            }
+
+        .game-title {
+            font-size: 24px; /* Increased font size */
+            font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+            margin: 10px 0;
+            font-weight: bold; /* Bold text */
+            text-align: left;
+            padding-top: 40px;
+        }
+
+        .game-text {
+            text-align: left; /* Align text to the left */
+            width: 100%; /* Full width to align text correctly */
+            margin-top: 10px;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+            .game-text p {
+                color: #AEB8BD;
+                font-family: Verdana, Geneva, sans-serif; /* Special font */
+                font-size: 18px; /* Increased font size */
+                line-height: 1.6; /* Increased line height for better readability */
+                max-width: 600px; /* Control text width */
+                margin: 0 auto; /* Center the paragraph */
+            }
+
+        #about-us {
+            background-color: #111221; /* Darkened Grey */
+            color: #fff;
+            padding: 5% 5%;
+            text-align: center;
+            min-height: 30vh;
+        }
+
+            #about-us img {
+                height: 120px;
+            }
+
+            #about-us h3 {
+                color: #FFFFFF;
+                font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+                font-size: 3em; /* Increased font size */
+                font-weight: bold; /* Bold text */
+            }
+
+            #about-us p {
+                color: #AEB8BD;
+                font-family: Verdana, Geneva, sans-serif; /* Special font */
+                font-size: 18px; /* Increased font size */
+                line-height: 1.6; /* Increased line height for better readability */
+                max-width: 600px; /* Control text width */
+                margin: 0 auto; /* Center the paragraph */
+            }
+
         #sliderImage {
             background-image: url('img_sliderImage.png'); /* Replace with your Gorilla Showdown image */
             background-size: cover;
@@ -266,131 +287,155 @@
         }
 
 
-@media (max-width: 768px) {
-    nav {
-        justify-content: center; /* Center the navbar content */
-        padding-right: 0; /* Remove the right padding */
-        padding-left: 0; /* Remove the left padding */
-        flex-direction: column; /* Stack the logo and buttons vertically */
-        align-items: center; /* Center the items horizontally */
-    }
-    nav img {
-        margin: 0 auto; /* Center the logo horizontally */
-        display: block; /* Ensures it behaves like a block element */
-    }
-    nav div {
-        display: flex; /* Hide the nav links for now (optional, if needed) */
-        gap: 20px; /* Space between buttons */
-        margin-top: 10px;
-    }
-    nav div a {
-        display: inline-block; /* Make each link a block */
-        padding: 10px 15px; /* Add padding to the links */
-        text-align: center; /* Center the text in the buttons */
-    }
-    #main-image h1 {
-        font-size: 3em;
-    }
-    #games {
-        padding: 100px 10px;
-    }
-    #games h2 {
-        font-size: 2em; /* Increased font size */
-    }
-    .games-container {
-        justify-content: space-between; /* Spread out the game items */
-        padding-left: 10px; /* Optional, to add space on the left */
-        padding-right: 10px; /* Optional, to add space on the right */
-    }
-    .game-title {
-        font-size: 1em; /* Increased font size */
-    }
-    /* Adjust the width of game items to fit better */
-    .game-item {
-        width: 100%; /* Reduced width for two items per row, closer to full screen */
-    }
-    .game-text p {
-        font-size: 16px;
-    }
-    #about-us img {
-        height: 80px; /* Reduce the height for smaller screens */
-    }
-    #about-us h3 {
-        font-size: 2em; /* Adjust heading size for smaller screens */
-    }
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center; /* Center the navbar content */
+                padding-right: 0; /* Remove the right padding */
+                padding-left: 0; /* Remove the left padding */
+                flex-direction: column; /* Stack the logo and buttons vertically */
+                align-items: center; /* Center the items horizontally */
+            }
 
-    #about-us p {
-        font-size: 16px; /* Adjust paragraph text size for smaller screens */
-    }
-        #footer {
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center align the items */
-            text-align: center; /* Center text */
-            padding: 20px; /* Adjust padding for better spacing */
-        }
-        .footer-column {
-            align-items: center; /* Center align items in each column */
-            padding: 0; /* Remove any left/right padding */
-            margin-bottom: 20px; /* Add spacing between columns */
-        }
-        .footer-column h3, .footer-column a {
-            text-align: center; /* Center align text within columns */
-        }
-        .social-icons {
-            justify-content: center; /* Center the social icons */
+                nav img {
+                    margin: 0 auto; /* Center the logo horizontally */
+                    display: block; /* Ensures it behaves like a block element */
+                }
+
+                nav div {
+                    display: flex; /* Hide the nav links for now (optional, if needed) */
+                    gap: 20px; /* Space between buttons */
+                    margin-top: 10px;
+                }
+
+                    nav div a {
+                        display: inline-block; /* Make each link a block */
+                        padding: 10px 15px; /* Add padding to the links */
+                        text-align: center; /* Center the text in the buttons */
+                    }
+
+            #main-image h1 {
+                font-size: 3em;
+            }
+
+            #games {
+                padding: 100px 10px;
+            }
+
+                #games h2 {
+                    font-size: 2em; /* Increased font size */
+                }
+
+            .games-container {
+                justify-content: space-between; /* Spread out the game items */
+                padding-left: 10px; /* Optional, to add space on the left */
+                padding-right: 10px; /* Optional, to add space on the right */
+            }
+
+            .game-title {
+                font-size: 1em; /* Increased font size */
+            }
+            /* Adjust the width of game items to fit better */
+            .game-item {
+                width: 100%; /* Reduced width for two items per row, closer to full screen */
+            }
+
+            .game-text p {
+                font-size: 16px;
+            }
+
+            #about-us img {
+                height: 80px; /* Reduce the height for smaller screens */
+            }
+
+            #about-us h3 {
+                font-size: 2em; /* Adjust heading size for smaller screens */
+            }
+
+            #about-us p {
+                font-size: 16px; /* Adjust paragraph text size for smaller screens */
+            }
+
+            #footer {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align the items */
+                text-align: center; /* Center text */
+                padding: 20px; /* Adjust padding for better spacing */
+            }
+
+            .footer-column {
+                align-items: center; /* Center align items in each column */
+                padding: 0; /* Remove any left/right padding */
+                margin-bottom: 20px; /* Add spacing between columns */
+            }
+
+                .footer-column h3, .footer-column a {
+                    text-align: center; /* Center align text within columns */
+                }
+
+            .social-icons {
+                justify-content: center; /* Center the social icons */
+            }
         }
 
-}
+        @media (max-width: 480px) {
+            #main-image h1 {
+                font-size: 2em;
+            }
 
-@media (max-width: 480px) {
-    #main-image h1 {
-        font-size: 2em;
-    }
-    #games h2 {
-        font-size: 1.5em; /* Increased font size */
-    }
-    #about-us img {
-        height: 60px; /* Further reduce the height for very small screens */
-    }
-    #about-us h3 {
-        font-size: 1.5em; /* Further adjust heading size for very small screens */
-    }
+            #games h2 {
+                font-size: 1.5em; /* Increased font size */
+            }
 
-    #about-us p {
-        font-size: 14px; /* Further adjust paragraph text size for very small screens */
-    }
-    #games {
-        padding: 100px 10px;
-    }
-    .game-text p {
-        font-size: 14px;
-    }
-    /* Adjust the width of game items to fit better */
-    .game-item {
-        width: 100%; /* Full width for one item per row */
-    }
-   .game-title {
-        font-size: 1em; /* Increased font size */
-    }
-    #footer {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align the items */
-        text-align: center; /* Center text */
-        padding: 20px; /* Adjust padding for better spacing */
-    }
-    .footer-column {
-        align-items: center; /* Center align items in each column */
-        padding: 0; /* Remove any left/right padding */
-        margin-bottom: 20px; /* Add spacing between columns */
-    }
-    .footer-column h3, .footer-column a {
-        text-align: center; /* Center align text within columns */
-    }
-    .social-icons {
-        justify-content: center; /* Center the social icons */
-    }
-}
-</style>
+            #about-us img {
+                height: 60px; /* Further reduce the height for very small screens */
+            }
+
+            #about-us h3 {
+                font-size: 1.5em; /* Further adjust heading size for very small screens */
+            }
+
+            #about-us p {
+                font-size: 14px; /* Further adjust paragraph text size for very small screens */
+            }
+
+            #games {
+                padding: 100px 10px;
+            }
+
+            .game-text p {
+                font-size: 14px;
+            }
+            /* Adjust the width of game items to fit better */
+            .game-item {
+                width: 100%; /* Full width for one item per row */
+            }
+
+            .game-title {
+                font-size: 1em; /* Increased font size */
+            }
+
+            #footer {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align the items */
+                text-align: center; /* Center text */
+                padding: 20px; /* Adjust padding for better spacing */
+            }
+
+            .footer-column {
+                align-items: center; /* Center align items in each column */
+                padding: 0; /* Remove any left/right padding */
+                margin-bottom: 20px; /* Add spacing between columns */
+            }
+
+                .footer-column h3, .footer-column a {
+                    text-align: center; /* Center align text within columns */
+                }
+
+            .social-icons {
+                justify-content: center; /* Center the social icons */
+            }
+        }
+    </style>
 </head>
 <body>
 

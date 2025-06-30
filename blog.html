@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog - Sloth King</title>
+    <link rel="canonical" href="https://www.slothking.au/blog.html" />
     <link rel="icon" href="slothkingfavicon.png" type="image/png">
     <style>
         /* styles.css - Embedded within the HTML */
@@ -13,6 +14,7 @@
             font-family: Arial, sans-serif; /* Main font */
             color: #fff;
         }
+
         nav {
             position: absolute;
             top: 0;
@@ -46,27 +48,29 @@
                     border-bottom: 2px solid #fff; /* Underline color and thickness */
                     padding-bottom: 5px; /* Space between text and underline */
                 }
+
         #main-image {
-        position: relative;
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-    }
-    .background-image {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%; /* Make the image larger than the viewport */
-        height: 100%; /* Make the image larger than the viewport */
-        background-image: url('img_sliderImage.png'); /* Replace with your main image */
-        background-size: cover;
-        background-position: center;
-        z-index: -1; /* Place it behind the text */
-        transition: transform 0.5s ease-out;
-    }
+            position: relative;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%; /* Make the image larger than the viewport */
+            height: 100%; /* Make the image larger than the viewport */
+            background-image: url('img_sliderImage.png'); /* Replace with your main image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place it behind the text */
+            transition: transform 0.5s ease-out;
+        }
 
 
 
@@ -131,80 +135,88 @@
             font-size: 16px;
         }
 
-        .post-body img {
-            max-width: 100%;
-            margin-top: 20px;
-            display: block;
-            border-radius: 8px;
-        }
+            .post-body img {
+                max-width: 100%;
+                margin-top: 20px;
+                display: block;
+                border-radius: 8px;
+            }
 
-        .post-body a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+            .post-body a {
+                color: #ffffff;
+                text-decoration: none;
+            }
 
-        .post-body a:hover {
-            text-decoration: underline;
-        }
+                .post-body a:hover {
+                    text-decoration: underline;
+                }
 
         /* Footer Stuff from other pages */
-            #footer {
-        background-color: #FFFFFF;
-        color: #333;
-        padding: 20px;
-        display: flex;
-        justify-content: center; /* Centering footer content */
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px; /* Adjusted spacing */
-        align-items: flex-start; 
-        font-family: Arial, sans-serif; /* Main font for footer */
-        font-size: 18px; /* Increased font size */
-	padding-top: 40px;
-	padding-bottom: 40px;
-    }
-    .footer-logo {
-        display: flex;
-        align-items: center;
-    }
-    .footer-logo img {
-        max-height: 30px; /* Adjust to fit logo size */
-        width: auto;
-    }
-    .footer-column {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Centering column content */
-	padding-left: 10%;
-	padding-right: 10%;
-    }
-    .footer-column h3 {
-        color: #AEB8BD;
-        margin: 0 0 10px;
-        font-weight: normal; /* Bold text */
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-    }
-    .footer-column a {
-        color: #333;
-        text-decoration: none;
-        margin: 5px 0;
-        font-weight: bold;
-        font-family: Arial, sans-serif; /* Main font for links */
-    }
-    .social-icons {
-        display: flex;
-        justify-content: flex-start; /* Center icons horizontally */
-        gap: 5px; /* Space between icons */
-    }
-    .social-icons img {
-        height: 30px;
-	width: auto;
-        margin: 5px;
-        object-fit: contain;
-    }
-    .social-icons img:first-child {
-        margin-left: 0; /* Remove left margin for the first icon */
-    }
+        #footer {
+            background-color: #FFFFFF;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centering footer content */
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjusted spacing */
+            align-items: flex-start;
+            font-family: Arial, sans-serif; /* Main font for footer */
+            font-size: 18px; /* Increased font size */
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+
+            .footer-logo img {
+                max-height: 30px; /* Adjust to fit logo size */
+                width: auto;
+            }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Centering column content */
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+            .footer-column h3 {
+                color: #AEB8BD;
+                margin: 0 0 10px;
+                font-weight: normal; /* Bold text */
+                font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+            }
+
+            .footer-column a {
+                color: #333;
+                text-decoration: none;
+                margin: 5px 0;
+                font-weight: bold;
+                font-family: Arial, sans-serif; /* Main font for links */
+            }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-start; /* Center icons horizontally */
+            gap: 5px; /* Space between icons */
+        }
+
+            .social-icons img {
+                height: 30px;
+                width: auto;
+                margin: 5px;
+                object-fit: contain;
+            }
+
+                .social-icons img:first-child {
+                    margin-left: 0; /* Remove left margin for the first icon */
+                }
 
 
         /* Vertical Timeline Line */
@@ -231,8 +243,13 @@
 
         /* Optional: Fade-in effect for posts */
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Mobile responsive styles */
@@ -249,50 +266,62 @@
                     margin: 0 auto; /* Center the logo horizontally */
                     display: block; /* Ensures it behaves like a block element */
                 }
-            nav div {
-                display: flex; /* Hide the nav links for now (optional, if needed) */
-                gap: 20px; /* Space between buttons */
-                margin-top: 10px;
-            }
-            nav div a {
-                display: inline-block; /* Make each link a block */
-                padding: 10px 15px; /* Add padding to the links */
-                text-align: center; /* Center the text in the buttons */
-            }
+
+                nav div {
+                    display: flex; /* Hide the nav links for now (optional, if needed) */
+                    gap: 20px; /* Space between buttons */
+                    margin-top: 10px;
+                }
+
+                    nav div a {
+                        display: inline-block; /* Make each link a block */
+                        padding: 10px 15px; /* Add padding to the links */
+                        text-align: center; /* Center the text in the buttons */
+                    }
+
             #main-image h1 {
                 font-size: 2em;
                 transform: translateY(50px);
             }
+
             #footer {
                 flex-direction: column; /* Stack items vertically */
                 align-items: center; /* Center align the items */
                 text-align: center; /* Center text */
                 padding: 20px; /* Adjust padding for better spacing */
             }
+
             .footer-column {
                 align-items: center; /* Center align items in each column */
                 padding: 0; /* Remove any left/right padding */
                 margin-bottom: 20px; /* Add spacing between columns */
             }
-            .footer-column h3, .footer-column a {
-                text-align: center; /* Center align text within columns */
-            }
+
+                .footer-column h3, .footer-column a {
+                    text-align: center; /* Center align text within columns */
+                }
+
             .social-icons {
                 justify-content: center; /* Center the social icons */
             }
+
             .post-date {
                 display: none;
             }
+
             .blog-content {
                 width: 95%;
                 padding: 0px;
             }
+
             .post {
                 margin-left: 0px; /* Add left margin for the dates */
             }
+
             .post-body {
                 margin-left: 0px;
             }
+
             .post h2 {
                 font-size: 1.4em;
             }
@@ -304,37 +333,45 @@
                 font-size: 2em;
                 transform: translateY(70px);
             }
+
             #footer {
                 flex-direction: column; /* Stack items vertically */
                 align-items: center; /* Center align the items */
                 text-align: center; /* Center text */
                 padding: 20px; /* Adjust padding for better spacing */
             }
+
             .footer-column {
                 align-items: center; /* Center align items in each column */
                 padding: 0; /* Remove any left/right padding */
                 margin-bottom: 20px; /* Add spacing between columns */
             }
-            .footer-column h3, .footer-column a {
-                text-align: center; /* Center align text within columns */
-            }
+
+                .footer-column h3, .footer-column a {
+                    text-align: center; /* Center align text within columns */
+                }
 
             .social-icons {
                 justify-content: center; /* Center the social icons */
             }
+
             .post-date {
                 display: none;
             }
+
             .blog-content {
                 width: 95%;
                 padding: 0px;
             }
+
             .post {
                 margin-left: 0px; /* Add left margin for the dates */
             }
+
             .post-body {
                 margin-left: 0px;
             }
+
             .post h2 {
                 font-size: 1.4em;
             }

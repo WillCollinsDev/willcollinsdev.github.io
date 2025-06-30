@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>team - Sloth King</title>
+    <link rel="canonical" href="https://www.slothking.au/team.html" />
     <link rel="icon" href="slothkingfavicon.png" type="image/png">
     <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif; /* Main font */
-        color: #fff;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif; /* Main font */
+            color: #fff;
+        }
+
         nav {
             position: absolute;
             top: 0;
@@ -44,175 +46,194 @@
                     border-bottom: 2px solid #fff; /* Underline color and thickness */
                     padding-bottom: 5px; /* Space between text and underline */
                 }
-    #main-image {
-        position: relative;
-        height: 55vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-    }
-    .background-image {
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%; /* Make the image larger than the viewport */
-        height: 100%; /* Make the image larger than the viewport */
-        background-image: url('teams-main-image.png'); /* Replace with your main image */
-        background-size: cover;
-        background-position: center;
-        z-index: -1; /* Place it behind the text */
-        transition: transform 0.5s ease-out;
-    }
-    #main-image h1 {
-        font-size: 3em;
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-        margin: 0;
-        z-index: 1;
-    }
-    .email-button {
-        display: inline-block;
-        background-color: #929EF4; /* Blue color */
-        color: white;
-        padding: 10px 20px;
-        border-radius: 50px; /* Pill shape */
-        text-decoration: none;
-        font-size: 16px;
-        font-family: Arial, sans-serif;
-    }
-    .email-button:hover {
-        background-color: #6e77ba; /* Darker blue on hover */
-    }
-	
-    #team-members {
-    background-color: #181930;
-    color: #fff;
-    padding: 100px 100px;
-    text-align: center;
-    min-height: 10vh;
-}
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
-    gap: 20px; /* Space between items */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Center grid */
-}
+        #main-image {
+            position: relative;
+            height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    .team-member {
-        text-align: center;
-    }
+        .background-image {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%; /* Make the image larger than the viewport */
+            height: 100%; /* Make the image larger than the viewport */
+            background-image: url('teams-main-image.png'); /* Replace with your main image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place it behind the text */
+            transition: transform 0.5s ease-out;
+        }
 
-    .team-photo {
-    	width: 170px; /* Adjust size as needed */
-    	height: 170px;
-    	border-radius: 50%; /* Circular border */
-    	object-fit: cover;
-        border: 3px solid #ccc; /* Border color */
-        margin-bottom: 10px;
-    }
+        #main-image h1 {
+            font-size: 3em;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+            margin: 0;
+            z-index: 1;
+        }
 
-    .team-name {
-        color: #FFFFFF; /* Gray text */
-        font-size: 16px; /* Adjust size as needed */
-    }
-    .team-role {
-        color: #ccc; /* Gray text */
-        font-size: 10px; /* Adjust size as needed */
-    }
-    #contact-us {
-        background-color: #111221; /* Darkened Grey */
-        color: #fff;
-        padding: 100px;
-        text-align: center;
-        min-height: 30vh;
-    }
-    #contact-us h3 {
-        color: #FFFFFF;
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-        font-size: 3em; /* Increased font size */
-        font-weight: bold; /* Bold text */
-    }
-    #contact-us p {
-        color: #AEB8BD;
-        font-family: Verdana, Geneva, sans-serif; /* Special font */
-        font-size: 18px; /* Increased font size */
-        line-height: 1.6; /* Increased line height for better readability */
-        max-width: 600px; /* Control text width */
-        margin: 0 auto; /* Center the paragraph */
-	padding-bottom: 50px;
-    }
-    #footer {
-        background-color: #FFFFFF;
-        color: #333;
-        padding: 20px;
-        display: flex;
-        justify-content: center; /* Centering footer content */
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px; /* Adjusted spacing */
-        align-items: flex-start; 
-        font-family: Arial, sans-serif; /* Main font for footer */
-        font-size: 18px; /* Increased font size */
-	padding-top: 40px;
-	padding-bottom: 40px;
-    }
-    .footer-logo {
-        display: flex;
-        align-items: center;
-    }
-    .footer-logo img {
-        max-height: 30px; /* Adjust to fit logo size */
-        width: auto;
-    }
-    .footer-column {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Centering column content */
-	padding-left: 10%;
-	padding-right: 10%;
-    }
-    .footer-column h3 {
-        color: #AEB8BD;
-        margin: 0 0 10px;
-        font-weight: normal; /* Bold text */
-        font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
-    }
-    .footer-column a {
-        color: #333;
-        text-decoration: none;
-        margin: 5px 0;
-        font-weight: bold;
-        font-family: Arial, sans-serif; /* Main font for links */
-    }
-    .social-icons {
-        display: flex;
-        justify-content: flex-start; /* Center icons horizontally */
-        gap: 5px; /* Space between icons */
-    }
-    .social-icons img {
-        height: 30px;
-	width: auto;
-        margin: 5px;
-        object-fit: contain;
-    }
-    .social-icons img:first-child {
-        margin-left: 0; /* Remove left margin for the first icon */
-    }
+        .email-button {
+            display: inline-block;
+            background-color: #929EF4; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px; /* Pill shape */
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
 
-    /* Add background images for the game boxes */
-    .game-box.gorilla-showdown {
-        background-image: url('img_gorillaShowdown.png'); /* Replace with your Gorilla Showdown image */
-        background-size: cover;
-        background-position: center;
-    }
-    .game-box.flickor {
-        background-image: url('img_flickor.png'); /* Replace with your Flickor image */
-        background-size: cover;
-        background-position: center;
-    }
+            .email-button:hover {
+                background-color: #6e77ba; /* Darker blue on hover */
+            }
+
+        #team-members {
+            background-color: #181930;
+            color: #fff;
+            padding: 100px 100px;
+            text-align: center;
+            min-height: 10vh;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
+            gap: 20px; /* Space between items */
+            max-width: 1200px; /* Adjust as needed */
+            margin: 0 auto; /* Center grid */
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 170px; /* Adjust size as needed */
+            height: 170px;
+            border-radius: 50%; /* Circular border */
+            object-fit: cover;
+            border: 3px solid #ccc; /* Border color */
+            margin-bottom: 10px;
+        }
+
+        .team-name {
+            color: #FFFFFF; /* Gray text */
+            font-size: 16px; /* Adjust size as needed */
+        }
+
+        .team-role {
+            color: #ccc; /* Gray text */
+            font-size: 10px; /* Adjust size as needed */
+        }
+
+        #contact-us {
+            background-color: #111221; /* Darkened Grey */
+            color: #fff;
+            padding: 100px;
+            text-align: center;
+            min-height: 30vh;
+        }
+
+            #contact-us h3 {
+                color: #FFFFFF;
+                font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+                font-size: 3em; /* Increased font size */
+                font-weight: bold; /* Bold text */
+            }
+
+            #contact-us p {
+                color: #AEB8BD;
+                font-family: Verdana, Geneva, sans-serif; /* Special font */
+                font-size: 18px; /* Increased font size */
+                line-height: 1.6; /* Increased line height for better readability */
+                max-width: 600px; /* Control text width */
+                margin: 0 auto; /* Center the paragraph */
+                padding-bottom: 50px;
+            }
+
+        #footer {
+            background-color: #FFFFFF;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centering footer content */
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Adjusted spacing */
+            align-items: flex-start;
+            font-family: Arial, sans-serif; /* Main font for footer */
+            font-size: 18px; /* Increased font size */
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+
+            .footer-logo img {
+                max-height: 30px; /* Adjust to fit logo size */
+                width: auto;
+            }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Centering column content */
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+            .footer-column h3 {
+                color: #AEB8BD;
+                margin: 0 0 10px;
+                font-weight: normal; /* Bold text */
+                font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
+            }
+
+            .footer-column a {
+                color: #333;
+                text-decoration: none;
+                margin: 5px 0;
+                font-weight: bold;
+                font-family: Arial, sans-serif; /* Main font for links */
+            }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-start; /* Center icons horizontally */
+            gap: 5px; /* Space between icons */
+        }
+
+            .social-icons img {
+                height: 30px;
+                width: auto;
+                margin: 5px;
+                object-fit: contain;
+            }
+
+                .social-icons img:first-child {
+                    margin-left: 0; /* Remove left margin for the first icon */
+                }
+
+        /* Add background images for the game boxes */
+        .game-box.gorilla-showdown {
+            background-image: url('img_gorillaShowdown.png'); /* Replace with your Gorilla Showdown image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .game-box.flickor {
+            background-image: url('img_flickor.png'); /* Replace with your Flickor image */
+            background-size: cover;
+            background-position: center;
+        }
 
         @media (max-width: 768px) {
             nav {
@@ -239,15 +260,19 @@
                         padding: 10px 15px; /* Add padding to the links */
                         text-align: center; /* Center the text in the buttons */
                     }
+
             #team-members {
                 padding: 50px 0px;
             }
+
             #contact-us {
                 padding: 50px;
             }
+
             #main-image h1 {
                 font-size: 2em;
             }
+
             #footer {
                 flex-direction: column; /* Stack items vertically */
                 align-items: center; /* Center align the items */
@@ -268,6 +293,7 @@
             .social-icons {
                 justify-content: center; /* Center the social icons */
             }
+
             #contact-us h3 {
                 font-size: 2em; /* Increased font size */
             }
@@ -275,13 +301,13 @@
             #contact-us p {
                 font-size: 16px; /* Increased font size */
             }
-
         }
 
         @media (max-width: 480px) {
             #main-image h1 {
                 font-size: 2em;
             }
+
             #footer {
                 flex-direction: column; /* Stack items vertically */
                 align-items: center; /* Center align the items */
@@ -302,12 +328,12 @@
             .social-icons {
                 justify-content: center; /* Center the social icons */
             }
+
             #contact-us p {
                 font-size: 14px; /* Increased font size */
             }
         }
-
-</style>
+    </style>
 </head>
 <body>
 
