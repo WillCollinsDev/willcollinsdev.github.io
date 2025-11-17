@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet the passionate team behind Sloth King – the indie game studio crafting titles like Gorilla Showdown and Flickor. Get to know our artists, programmers, and the vibes manager.">
-    <title>team - Sloth King</title>
-    <link rel="canonical" href="https://www.slothking.au/team.html" />
+    <meta name="description" content="Gorilla Showdown is a chaotic multiplayer rhythm shooter by Sloth King. Battle to the beat in vibrant arenas and fight for the title of Top Monkey.">
+    <title>gorilla showdown - Sloth King</title>
+    <link rel="canonical" href="https://www.slothking.au/gorillashowdown.html" />
     <link rel="icon" href="slothkingfavicon.png" type="image/png">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Meet the Sloth King Team">
-    <meta property="og:description" content="Discover the passionate team behind Sloth King, creators of Gorilla Showdown.">
+    <meta property="og:title" content="Gorilla Showdown – A Chaotic Multiplayer Rhythm Shooter">
+    <meta property="og:description" content="Fight to the beat in Gorilla Showdown, the wild new game from indie studio Sloth King. Dance, battle, and claim the title of Top Monkey.">
     <meta property="og:image" content="https://www.slothking.au/img_gorillaShowdown.png">
-    <meta property="og:url" content="https://www.slothking.au/team.html">
-    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.slothking.au/gorillashowdown.html">
+    <meta property="og:type" content="video.game">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Meet the Sloth King Team">
-    <meta name="twitter:description" content="Discover the passionate team behind Sloth King, creators of Gorilla Showdown.">
+    <meta name="twitter:title" content="Gorilla Showdown – A Chaotic Multiplayer Rhythm Shooter">
+    <meta name="twitter:description" content="Dance, shoot, and battle in Gorilla Showdown. Join the rhythm-fueled chaos and become the Top Monkey.">
     <meta name="twitter:image" content="https://www.slothking.au/img_gorillaShowdown.png">
 
     <style>
@@ -26,13 +24,15 @@
             margin: 0;
             font-family: Arial, sans-serif; /* Main font */
             color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+            background-color: #181930;
         }
 
         nav {
             position: absolute;
             top: 0;
             width: 100%;
-            background-color: transparent;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -64,7 +64,7 @@
 
         #main-image {
             position: relative;
-            height: 55vh;
+            height: 95vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -78,7 +78,7 @@
             left: 0%;
             width: 100%; /* Make the image larger than the viewport */
             height: 100%; /* Make the image larger than the viewport */
-            background-image: url('teams-main-image.png'); /* Replace with your main image */
+            background-image: url('gs_page_main.png'); /* Replace with your main image */
             background-size: cover;
             background-position: center;
             z-index: -1; /* Place it behind the text */
@@ -146,7 +146,7 @@
             font-size: 10px; /* Adjust size as needed */
         }
 
-        #contact-us {
+        #press-kit {
             background-color: #111221; /* Darkened Grey */
             color: #fff;
             padding: 100px;
@@ -154,14 +154,14 @@
             min-height: 30vh;
         }
 
-            #contact-us h3 {
+            #press-kit h3 {
                 color: #FFFFFF;
                 font-family: 'Helvetica Neue', Helvetica, sans-serif; /* Heading font */
                 font-size: 3em; /* Increased font size */
                 font-weight: bold; /* Bold text */
             }
 
-            #contact-us p {
+            #press-kit p {
                 color: #AEB8BD;
                 font-family: Verdana, Geneva, sans-serif; /* Special font */
                 font-size: 18px; /* Increased font size */
@@ -316,6 +316,11 @@
             #contact-us p {
                 font-size: 16px; /* Increased font size */
             }
+
+            #buttons-section {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -347,7 +352,114 @@
             #contact-us p {
                 font-size: 14px; /* Increased font size */
             }
+
+            #buttons-section {
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+            }
         }
+
+        /* --- CAROUSEL STYLES FIX --- */
+        .diagonal-carousel {
+            position: relative;
+            width: 100%;
+            height: 40vh; /* Proportional height to contain rotated track and padding */
+            margin-top: -20vh; /* pulls it upward to overlap main image */
+            z-index: 2; /* above background image */
+            pointer-events: none;
+            overflow: hidden; /* Important for containing the rotated element */
+        }
+
+        .carousel-track {
+            display: flex;
+            padding: 15px 50px; /* Add vertical and horizontal padding */
+            width: 300%;
+            transform: rotate(-3deg);
+            animation: scroll 60s linear infinite;
+            will-change: transform;
+            background-color: rgba(248, 226, 193, 1); /* Track background color */
+            backdrop-filter: blur(4px);
+            display: flex;
+            gap: 10px;
+        }
+
+            .carousel-track img {
+                height: 20vh; /* Scales proportionally with the viewport height */
+                width: auto; /* Ensures aspect ratio is maintained */
+                border-radius: 0px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease;
+                pointer-events: auto;
+            }
+        /* --------------------------- */
+
+        @keyframes scroll {
+            0% {
+                transform: rotate(-3deg) translateX(0);
+            }
+
+            100% {
+                transform: rotate(-3deg) translateX(-20%);
+            }
+        }
+
+        /* --- BUTTONS SECTION STYLES --- */
+        #buttons-section {
+            background-color: #181930;
+            padding: 50px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
+            cursor: pointer;
+        }
+
+        .primary-button {
+            background-color: #FF5733; /* Bright, stand-out color */
+            color: white;
+            border: 2px solid #FF5733;
+        }
+
+            .primary-button:hover {
+                background-color: #E04D2D;
+                transform: translateY(-2px);
+            }
+
+        .secondary-button {
+            background-color: transparent;
+            color: #929EF4; /* Blue color from your original email button */
+            border: 2px solid #929EF4;
+        }
+
+            .secondary-button.email {
+                color: white;
+                background-color: #929EF4;
+            }
+
+            .secondary-button:hover {
+                background-color: #111221; /* Dark background on hover */
+                color: white;
+                transform: translateY(-2px);
+            }
+
+            .secondary-button.email:hover {
+                background-color: #6e77ba;
+            }
+        /* ------------------------------ */
+
     </style>
 
     <script type="application/ld+json">
@@ -382,48 +494,44 @@
 <body>
 
     <nav>
-        <img src="SlothKing_Logo_White.png" alt="SlothKing Logo"> <!-- Replace with your logo -->
-        <div>
+        <img src="SlothKing_Logo_White.png" alt="SlothKing Logo"> <div>
             <a href="index.html">games</a>
-            <a href="team.html" class="active">team</a>
-            <a href="gorillashowdown.html">gorilla showdown</a>
+            <a href="team.html">team</a>
+            <a href="gorillashowdown.html" class="active">gorilla showdown</a>
         </div>
     </nav>
 
     <div id="main-image">
         <div class="background-image"></div>
-        <h1>The Sloth King Family</h1>
     </div>
-<div id="team-members">
-    <div class="team-grid">
-        <div class="team-member">
-            <img src="team-member1-1.png" alt="Team Member 1" class="team-photo">
-            <p class="team-name">George</p>
-            <p class="team-role">Co-Founder, Lead Artist</p>
+
+    <div class="diagonal-carousel">
+        <div class="carousel-track">
+            <img src="carousel1.png" alt="1">
+            <img src="carousel2.png" alt="2">
+            <img src="carousel3.png" alt="3">
+            <img src="carousel4.png" alt="4">
+            <img src="carousel5.png" alt="5">
+            <img src="carousel6.png" alt="6">
+            <img src="carousel7.png" alt="7">
+            <img src="carousel1.png" alt="1 clone">
+            <img src="carousel2.png" alt="2 clone">
+            <img src="carousel3.png" alt="3 clone">
         </div>
-        <div class="team-member">
-            <img src="team-member3-1.png" alt="Team Member 3" class="team-photo">
-            <p class="team-name">Miki</p>
-            <p class="team-role">Senior Artist</p>
-        </div>
-        <div class="team-member">
-            <img src="team-member4-1.png" alt="Team Member 4" class="team-photo">
-            <p class="team-name">Will</p>
-            <p class="team-role">Co-Founder, Lead Programmer</p>
-        </div>
-        <div class="team-member">
-            <img src="team-member2.png" alt="Team Member 2" class="team-photo">
-            <p class="team-name">Hercules</p>
-            <p class="team-role">Good Vibes Manager</p>
-        </div>
-        <!-- Add more team members here -->
     </div>
-</div>
-</div>
-    <div id="contact-us">
-	<h3>Contact Us</h3>
-        <p>Got some questions? Send us an email.</p>
-	<a href="mailto:SlothKingAU@gmail.com" class="email-button">SlothKingAU@gmail.com</a>
+    <div id="buttons-section">
+        <a href="https://store.steampowered.com/app/3217900/Gorilla_Showdown/" target="_blank" class="action-button primary-button">
+            Wishlist Now
+        </a>
+        <a href="https://www.youtube.com/watch?v=uE6Iax4ECQc" target="_blank" class="action-button secondary-button">
+            Watch Trailer
+        </a>
+        <a href="https://drive.google.com/drive/folders/10iwPzrIM9_mW7c9S3Tp990vqr9LafGQr?usp=sharing" class="action-button secondary-button">
+            Press Kit
+        </a>
+        <a href="mailto:SlothKingAU@gmail.com" class="action-button secondary-button email">
+            Contact Us
+        </a>
     </div>
 
     <div id="footer">
@@ -432,7 +540,7 @@
             <a href="index.html">games</a>
             <a href="team.html">team</a>
         </div>
-	<div class="footer-column">
+        <div class="footer-column">
             <h3>Games</h3>
             <a href="gorillashowdown.html">gorilla showdown</a>
             <a href="https://slothkingau.itch.io/flickor">flickor</a>
@@ -441,11 +549,7 @@
         <div class="footer-column">
             <h3>Social</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/slothkingau/?next=%2F"><img src="instagram-icon.png" alt="Instagram"></a> <!-- Replace with your icon -->
-                <a href="https://discord.gg/tJgtWmkRNG"><img src="discord-icon.png" alt="Discord"></a> <!-- Replace with your icon -->
-                <a href="https://x.com/SlothKingAU"><img src="twitter-icon.png" alt="Twitter (X)"></a> <!-- Replace with your icon -->
-                <a href="https://www.youtube.com/@SlothKingAU"><img src="youtube-icon.png" alt="YouTube"></a> <!-- Replace with your icon -->
-                <a href="https://bsky.app/profile/slothkingau.bsky.social"><img src="bluesky-icon.png" alt="BlueSky"></a><!-- Replace with your icon -->
+                <a href="https://www.instagram.com/slothkingau/?next=%2F"><img src="instagram-icon.png" alt="Instagram"></a> <a href="https://discord.gg/tJgtWmkRNG"><img src="discord-icon.png" alt="Discord"></a> <a href="https://x.com/SlothKingAU"><img src="twitter-icon.png" alt="Twitter (X)"></a> <a href="https://www.youtube.com/@SlothKingAU"><img src="youtube-icon.png" alt="YouTube"></a> <a href="https://bsky.app/profile/slothkingau.bsky.social"><img src="bluesky-icon.png" alt="BlueSky"></a>
             </div>
         </div>
     </div>
